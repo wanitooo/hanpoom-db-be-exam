@@ -1,7 +1,7 @@
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="100" alt="NestJS Logo" /></a>
   &nbsp;&nbsp;&nbsp;
-  <a href="https://reactjs.org/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" width="100" alt="React Logo" /></a>
+  <a href="https://typeorm.io/" target="blank"><img src="https://github.com/typeorm/typeorm/raw/master/resources/logo_big.png" width="180" alt="TypeORM Logo" /></a>
   &nbsp;&nbsp;&nbsp;
   <a href="https://www.typescriptlang.org/" target="blank"><img src="https://cdn.worldvectorlogo.com/logos/typescript.svg" width="100" alt="TypeScript Logo" /></a>
   &nbsp;&nbsp;&nbsp;
