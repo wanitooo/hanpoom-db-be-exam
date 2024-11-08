@@ -1,0 +1,96 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type PickingSlipItem {
+  id: Int!
+  picking_slip: PickingSlip
+  item_id: Int!
+  stock_id: Int!
+  order_fulfillment_product_id: Int!
+  quantity: Int!
+  refunded_quantity: Int
+  location_id: Int!
+  location_code: String!
+  is_pre_order: Boolean!
+  pre_order_shipping_at: DateTime
+  created_at: DateTime
+  updated_at: DateTime
+}
+
+type PickingSlip {
+  id: Int!
+  order_id: Int!
+  order_fulfillment_order_id: Int!
+  is_contained_single_product: Boolean!
+  created_at: DateTime
+  items: [PickingSlipItem!]
+  date: PickingSlipDate
+}
+
+type PickingSlipDate {
+  id: Int!
+  picking_slip: PickingSlip
+  printed_username: String
+  inspected_username: String
+  packed_username: String
+  shipped_username: String
+  held_username: String
+  cancelled_username: String
+  refunded_username: String
+  confirmed_username: String
+  printed_at: DateTime
+  inspected_at: DateTime
+  packed_at: DateTime
+  shipped_at: DateTime
+  delivered_at: DateTime
+  returned_at: DateTime
+  cancelled_at: DateTime
+  refunded_at: DateTime
+  held_at: DateTime
+  confirmed_at: DateTime
+  held_reason: String
+}
+
+type PickingSlipView {
+  picking_slip_id: Int
+  order_id: String
+  created_at: DateTime
+  picking_slip_status: String
+  has_pre_order_item: Boolean
+}
+
+type PreorderSlip {
+  id: Int!
+  created_at: DateTime
+  order_fulfillment_order_id: String
+  count_of_pre_order_items: Int
+  printed_username: String
+  inspected_username: String
+  packed_username: String
+  shipped_username: String
+  held_username: String
+  cancelled_username: String
+  refunded_username: String
+  confirmed_username: String
+  printed_at: DateTime
+  inspected_at: DateTime
+  packed_at: DateTime
+  shipped_at: DateTime
+  delivered_at: DateTime
+  returned_at: DateTime
+  cancelled_at: DateTime
+  refunded_at: DateTime
+  held_at: DateTime
+  confirmed_at: DateTime
+  held_reason: String
+}
+
+"""Custom DateTime scalar type"""
+scalar DateTime
+
+type Query {
+  defaultPickingSlips: [PickingSlip!]!
+  preOrder(date: String!): [PreorderSlip!]!
+  pickingSlips(page: Int! = 1, pageSize: Int! = 3, status: String! = "printed"): [PickingSlipView!]!
+}
