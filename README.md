@@ -32,7 +32,8 @@ or
 npm install
 ```
 
-- Create your database and put the credentials in a .env file like so:
+- Create your database via MySQL workbench or the tool of your choice
+- Then put the credentials in a .env file like so:
 
 ```
 DB_TYPE=mysql
