@@ -53,6 +53,7 @@ or
 
 npm run start:dev
 ```
+Note: This will start seeding the database automatically. All entries will be saved into the database. The seeding should not take up more than 5 minutes.
 
 ### Queries available
 
